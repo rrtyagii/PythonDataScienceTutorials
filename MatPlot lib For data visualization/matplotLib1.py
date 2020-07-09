@@ -46,5 +46,26 @@ print()
 fig, axes3 = pplt.subplots(nrows =3, ncols=3)
 pplt.tight_layout()
 
+for i in axes3:
+    i.plot(x,y)
+
+axes3[0].plot(x,y)
+
+axes3[1].plot(y,x)
 
 
+#Figure size an DPI
+fig2 = pplt.figure(figsize=(3,2), dpi=100)
+
+#MatPlot lib 3
+
+fig3 = pplt.figure()
+ax = fig3.add_axes([0,0,2,2])
+ax.plot(x,y,color="purple", linewidth=3, linestyle ='-.', alpha=0.5)
+
+ax.plot(x,y,color="purple", lw=3, market='o', markersize=20, markerfacecolor='yellow', markeredgewidth=3, markeredgecolor='green')
+
+
+#Control over 
+ax.set_xlim([0,1])
+ax.set_ylim([0,2])
